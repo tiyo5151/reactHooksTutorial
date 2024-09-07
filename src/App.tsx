@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
@@ -9,6 +9,11 @@ function App() {
     console.log(count);
     return count;
   };
+
+  useEffect(() => {
+    console.log('Hello Hooks');
+  }, [count]);
+
   return (
     <div className="App">
       <h1>UseState</h1>
